@@ -1,5 +1,5 @@
-import * as path from "path";
-import * as fs from "fs-extra";
+import path from "path";
+import fs from "fs-extra";
 import { build as viteBuild, InlineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { RollupOutput } from "rollup";
@@ -73,6 +73,6 @@ export async function build(root: string) {
   // 2. 引入 server-entry
   const serverEntryPath = path.resolve(root, ".temp", "ssr-entry.js");
   // 3. 服务端渲染，产出 HTML
-  const { render } = require(serverEntryPath);
+  const { render } = await import(serverEntryPath);
   await renderPage(render, root, clientBundle);
 }

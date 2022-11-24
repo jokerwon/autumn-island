@@ -7,13 +7,15 @@
     "island": "bin/island.js"
   },
   "scripts": {
-    "start": "tsc -w"
+    "start": "tsup --watch",
+    "build": "tsup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.9",
+    "tsup": "^6.5.0",
     "typescript": "^4.9.3"
   },
   "dependencies": {
