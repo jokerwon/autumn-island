@@ -2,7 +2,6 @@ import path from 'path';
 import fs from 'fs-extra';
 import { build as viteBuild, InlineConfig } from 'vite';
 import { RollupOutput } from 'rollup';
-import ora from 'ora';
 import react from '@vitejs/plugin-react';
 import { CLIENT_ENTRY_PATH, SERVER_ENTRY_PATH } from './constants';
 
@@ -24,8 +23,6 @@ export async function bundle(root: string) {
       plugins: [react()]
     };
   };
-
-  const spinner = ora();
 
   console.info('Building client & server bundles');
   try {
