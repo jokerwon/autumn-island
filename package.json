@@ -7,7 +7,7 @@
     "island": "bin/island.js"
   },
   "scripts": {
-    "start": "tsup --watch",
+    "dev": "tsup --watch",
     "build": "tsup",
     "lint": "eslint --fix --ext .ts,.tsx,.js,.jsx --quiet ./",
     "test:unit": "vitest run",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@loadable/component": "^5.16.3",
     "@playwright/test": "1.26.1",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
@@ -49,6 +50,7 @@
     "cac": "^6.7.14",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "fast-glob": "^3.3.2",
     "fs-extra": "^10.1.0",
     "prettier": "^2.8.1",
     "react": "^18.2.0",
