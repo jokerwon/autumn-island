@@ -13,13 +13,10 @@ export const rehypePluginPreWrapper: Plugin<[], Root> = () => {
         node.children[0].tagName === 'code' &&
         !node.data?.isVisited
       ) {
-        console.log(node.tagName);
         const codeNode = node.children[0];
         const codeClassName = codeNode.properties?.className?.toString() || '';
         // language-xxx
         const lang = codeClassName.split('-')[1];
-
-        codeNode.properties.className = '';
 
         const clonedNode: Element = {
           type: 'element',
